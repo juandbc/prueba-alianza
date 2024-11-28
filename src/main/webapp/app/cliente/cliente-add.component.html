@@ -1,0 +1,13 @@
+<div class="flex flex-wrap mb-6">
+    <h1 class="grow text-3xl md:text-4xl font-medium mb-2" i18n="@@cliente.add.headline">Add Cliente</h1>
+    <div>
+        <a routerLink="/clientes" class="inline-block text-white bg-gray-500 hover:bg-gray-600 focus:ring-gray-200 focus:ring-4 rounded px-5 py-2" i18n="@@cliente.add.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="addForm" field="sharedKey" i18n-label="@@cliente.sharedKey.label" label="Shared Key" />
+    <app-input-row [group]="addForm" field="businessId" i18n-label="@@cliente.businessId.label" label="Business Id" />
+    <app-input-row [group]="addForm" field="email" i18n-label="@@cliente.email.label" label="Email" />
+    <app-input-row [group]="addForm" field="phone" i18n-label="@@cliente.phone.label" label="Phone" />
+    <input type="submit" i18n-value="@@cliente.add.headline" value="Add Cliente" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-300  focus:ring-4 rounded px-5 py-2 mt-6" />
+</form>
