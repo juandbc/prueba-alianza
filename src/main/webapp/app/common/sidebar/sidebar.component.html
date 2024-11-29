@@ -1,9 +1,9 @@
 <aside id="sidebar"
-       class="container fixed left-0 z-40 w-64 pl-4 h-screen transition-transform -translate-x-full md:translate-x-0 max-md:bg-white max-md:mt-1">
+       class="container fixed left-0 z-40 w-64 pl-4 h-screen transition-transform -translate-x-full lg:translate-x-0 lg:mt-1">
     <img ngSrc="/client.svg" alt="Client icon" height="40" width="40" class="ml-1 inline-block">
     <h1 class="inline-block grow text-3xl md:text-4xl font-medium text-center align-middle text-sky-400"
         i18n="@@cliente.list.headline">Clients</h1>
-    <div id="navbarToggle" class="h-full pl-11 py-4 overflow-y-auto bg-gray-50">
+    <div id="navbarToggle" class="h-full pl-11 py-4 overflow-y-auto">
         <ul class="space-y-2">
             <li>
                 <a routerLink="/clientes" class="block text-gray-700 hover:font-bold p-2" i18n="@@navigation.home">Clients</a>
@@ -24,7 +24,7 @@
     </div>
 </aside>
 <!-- Botón de menú -->
-<button id="menuToggle" type="button" class="absolute top-4 left-4 z-50 md:hidden border-2 border-gray-400 rounded"
+<button id="menuToggle" type="button" class="absolute top-4 left-4 z-50 lg:hidden border-2 border-gray-400 rounded"
         data-dropdown-keepopen="true" i18n-aria-label="@@navigation.toggle" aria-label="Toggle navigation"
         aria-controls="navbarToggle" aria-expanded="false">
     <div class="space-y-1.5 my-2.5 mx-4">

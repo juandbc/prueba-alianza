@@ -19,13 +19,6 @@ export class ClienteListComponent implements OnInit, OnDestroy {
   clientes?: ClienteDTO[];
   navigationSubscription?: Subscription;
 
-  getMessage(key: string, details?: any) {
-    const messages: Record<string, string> = {
-      confirm: $localize`:@@delete.confirm:Do you really want to delete this element? This cannot be undone.`,
-      deleted: $localize`:@@cliente.delete.success:Cliente was removed successfully.`    };
-    return messages[key];
-  }
-
   ngOnInit() {
     this.loadData();
     this.navigationSubscription = this.router.events.subscribe((event) => {

@@ -1,4 +1,4 @@
-<div class="ml-64 flex items-start max-md:ml-0 max-md:mb-3">
+<div class="flex items-start max-lg:ml-0 max-lg:mb-3">
     <div class="flex h-10 space-x-2">
         <button class="inline-block text-white bg-blue-600 hover:bg-yellow-600 hover:text-black focus:ring-blue-300 focus:ring-4 rounded h-full px-3 content-center">
             <img ngSrc="plus.png" alt="Add icon" height="16" width="16" class="align-middle inline-block">
@@ -11,52 +11,51 @@
         </a>
     </div>
 </div>
-<div class="container">
-<span class=" block mb-2 font-bold text-2xl text-sky-400">Clients</span>
-@if (!clientes || clientes.length === 0) {
-    <div i18n="@@cliente.list.empty">No Clientes could be found.</div>
-} @else {
-    <div class="">
-        <table class="table-auto border border-gray-400 border-collapse w-full">
-            <thead>
-            <tr>
-                <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.sharedKey.label">Shared
-                    Key
-                </th>
-                <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.businessId.label">Business
-                    ID
-                </th>
-                <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.email.label">E-mail</th>
-                <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.phone.label">Phone</th>
-                <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.dataAdded.label">Data
-                    Added
-                </th>
-                <th scope="col">
-                    <img ngSrc="pencil.png" alt="Edit icon" width="16" height="16" class="mx-auto">
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-                @for (cliente of clientes; track cliente.sharedKey) {
-                    <tr class="border border-gray-400 border-2 border-gray">
-                        <td class="border border-gray-400 p-2">{{ cliente.sharedKey }}</td>
-                        <td class="border border-gray-400 p-2">{{ cliente.businessId }}</td>
-                        <td class="border border-gray-400 p-2">{{ cliente.email }}</td>
-                        <td class="border border-gray-400 p-2">{{ cliente.phone }}</td>
-                        <td class="border border-gray-400 p-2">{{ cliente.dataAdded | date: 'dd/MM/yyy' }}</td>
-                        <td class="border border-gray-400 p-2">
-                            <div class="float-right whitespace-nowrap">
-                                <a [routerLink]="['/clientes/edit', cliente.sharedKey]"
-                                   class="block mx-auto px-2.5 py-1.5 text-sm"
-                                   i18n="@@cliente.list.edit">
-                                    <img ngSrc="black-pencil.png" alt="Edit icon" width="16" height="16" class="mx-auto">
+<div>
+    <span class=" block my-2 font-bold text-2xl text-sky-400">Clients</span>
+    @if (!clientes || clientes.length === 0) {
+        <div i18n="@@cliente.list.empty">No Clientes could be found.</div>
+    } @else {
+        <div>
+            <table class="border border-gray-400 border-collapse w-full text-sm" style="table-layout: auto">
+                <thead>
+                <tr>
+                    <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.sharedKey.label">
+                        Shared
+                        Key
+                    </th>
+                    <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.businessId.label">
+                        Business ID
+                    </th>
+                    <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.email.label">E-mail
+                    </th>
+                    <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.phone.label">Phone</th>
+                    <th scope="col" class="border border-gray-400 text-left p-2" i18n="@@cliente.dataAdded.label">
+                        Data Added
+                    </th>
+                    <th scope="col" class="p-2">
+                        <img ngSrc="pencil.png" alt="Edit icon" width="16" height="16" class="mx-auto object-cover size-4">
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                    @for (cliente of clientes; track cliente.sharedKey) {
+                        <tr class="border border-gray-400 border-gray">
+                            <td class="border border-gray-400 p-2">{{ cliente.sharedKey }}</td>
+                            <td class="border border-gray-400 p-2">{{ cliente.businessId }}</td>
+                            <td class="border border-gray-400 p-2">{{ cliente.email }}</td>
+                            <td class="border border-gray-400 p-2">{{ cliente.phone }}</td>
+                            <td class="border border-gray-400 p-2">{{ cliente.dataAdded | date: 'dd/MM/yyy' }}</td>
+                            <td class="border border-gray-400 p-2">
+                                <a [routerLink]="['/clientes/edit', cliente.sharedKey]" i18n="@@cliente.list.edit">
+                                    <img ngSrc="black-pencil.png" alt="Edit icon" width="16" height="16"
+                                         class="min-w-4 min-h-4 object-contain mx-auto">
                                 </a>
-                            </div>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-}
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
 </div>
