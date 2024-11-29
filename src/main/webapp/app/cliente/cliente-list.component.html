@@ -1,4 +1,18 @@
-<span class=" block font-bold text-2xl  text-sky-400">Clients</span>
+<div class="ml-64 flex items-start max-md:ml-0 max-md:mb-3">
+    <div class="flex h-10 space-x-2">
+        <button class="inline-block text-white bg-blue-600 hover:bg-yellow-600 hover:text-black focus:ring-blue-300 focus:ring-4 rounded h-full px-3 content-center">
+            <img ngSrc="plus.png" alt="Add icon" height="16" width="16" class="align-middle inline-block">
+            <span class="ml-1" i18n="@@cliente.list.createNew">New</span>
+        </button>
+        <a class="inline-block text-white bg-blue-600 hover:bg-yellow-600 hover:text-black focus:ring-blue-300 focus:ring-4 rounded h-full px-5 content-center"
+           routerLink="/clientes/export">
+            <img ngSrc="share.png" alt="Export icon" height="16" width="16" class="inline-block align-middle">
+            <span class="ml-1" i18n="@ @cliente.list.export">Export</span>
+        </a>
+    </div>
+</div>
+<div class="container">
+<span class=" block mb-2 font-bold text-2xl text-sky-400">Clients</span>
 @if (!clientes || clientes.length === 0) {
     <div i18n="@@cliente.list.empty">No Clientes could be found.</div>
 } @else {
@@ -18,7 +32,7 @@
                     Added
                 </th>
                 <th scope="col">
-                    <img src="pencil.png" alt="Edit icon" class="w-4 mx-auto">
+                    <img ngSrc="pencil.png" alt="Edit icon" width="16" height="16" class="mx-auto">
                 </th>
             </tr>
             </thead>
@@ -35,7 +49,7 @@
                                 <a [routerLink]="['/clientes/edit', cliente.sharedKey]"
                                    class="block mx-auto px-2.5 py-1.5 text-sm"
                                    i18n="@@cliente.list.edit">
-                                    <img src="black-pencil.png" alt="Edit icon" class="w-4 mx-auto">
+                                    <img ngSrc="black-pencil.png" alt="Edit icon" width="16" height="16" class="mx-auto">
                                 </a>
                             </div>
                         </td>
@@ -45,3 +59,4 @@
         </table>
     </div>
 }
+</div>

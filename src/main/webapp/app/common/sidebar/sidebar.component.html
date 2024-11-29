@@ -1,6 +1,6 @@
 <aside id="sidebar"
        class="container fixed left-0 z-40 w-64 pl-4 h-screen transition-transform -translate-x-full md:translate-x-0 max-md:bg-white max-md:mt-1">
-    <img src="client.svg" alt="Client icon" class="ml-1 size-10 inline-block">
+    <img ngSrc="/client.svg" alt="Client icon" height="40" width="40" class="ml-1 inline-block">
     <h1 class="inline-block grow text-3xl md:text-4xl font-medium text-center align-middle text-sky-400"
         i18n="@@cliente.list.headline">Clients</h1>
     <div id="navbarToggle" class="h-full pl-11 py-4 overflow-y-auto bg-gray-50">
@@ -33,13 +33,3 @@
         <div class="w-6 h-0.5 bg-gray-400"></div>
     </div>
 </button>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.getElementById("menuToggle");
-        const sidebar = document.getElementById("sidebar");
-
-        menuToggle.addEventListener("click", () => {
-            sidebar.classList.remove("-translate-x-full");
-        });
-    });
-</script>

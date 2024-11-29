@@ -1,5 +1,5 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ErrorHandler } from 'app/common/error-handler.injectable';
@@ -9,7 +9,7 @@ import { ClienteDTO } from 'app/cliente/cliente.model';
 
 @Component({
   selector: 'app-cliente-list',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, NgOptimizedImage],
   templateUrl: './cliente-list.component.html'})
 export class ClienteListComponent implements OnInit, OnDestroy {
 
