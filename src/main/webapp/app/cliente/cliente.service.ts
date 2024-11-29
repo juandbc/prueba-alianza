@@ -27,9 +27,4 @@ export class ClienteService {
   updateCliente(sharedKey: string, clienteDTO: ClienteDTO) {
     return this.http.put<string>(this.resourcePath + '/' + sharedKey, clienteDTO);
   }
-
-  deleteCliente(sharedKey: string) {
-    return this.http.delete(this.resourcePath + '/' + sharedKey);
-  }
-
 }

@@ -53,13 +53,4 @@ public class ClienteResource {
         clienteService.update(sharedKey, clienteDTO);
         return ResponseEntity.ok('"' + sharedKey + '"');
     }
-
-    @DeleteMapping("/{sharedKey}")
-    @ApiResponse(responseCode = "204")
-    public ResponseEntity<Void> deleteCliente(
-            @PathVariable(name = "sharedKey") final String sharedKey) {
-        clienteService.delete(sharedKey);
-        return ResponseEntity.noContent().build();
-    }
-
 }

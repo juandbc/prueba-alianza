@@ -38,7 +38,7 @@ export class ClienteListComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.navigationSubscription!.unsubscribe();
   }
-  
+
   loadData() {
     this.clienteService.getAllClientes()
         .subscribe({
@@ -46,19 +46,4 @@ export class ClienteListComponent implements OnInit, OnDestroy {
           error: (error) => this.errorHandler.handleServerError(error.error)
         });
   }
-
-  confirmDelete(sharedKey: string) {
-    if (confirm(this.getMessage('confirm'))) {
-      this.clienteService.deleteCliente(sharedKey)
-          .subscribe({
-            next: () => this.router.navigate(['/clientes'], {
-              state: {
-                msgInfo: this.getMessage('deleted')
-              }
-            }),
-            error: (error) => this.errorHandler.handleServerError(error.error)
-          });
-    }
-  }
-
 }
