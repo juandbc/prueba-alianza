@@ -20,10 +20,10 @@ export class ClienteAddComponent {
   errorHandler = inject(ErrorHandler);
 
   addForm = new FormGroup({
-    sharedKey: new FormControl(null, [Validators.required, Validators.maxLength(255)]),
-    businessId: new FormControl(null, [Validators.required, Validators.maxLength(255)]),
-    email: new FormControl(null, [Validators.required, Validators.maxLength(255)]),
-    phone: new FormControl(null, [Validators.required, Validators.maxLength(255)])
+    sharedKey: new FormControl(null, [Validators.required, Validators.maxLength(20)]),
+    businessId: new FormControl(null, [Validators.required, Validators.maxLength(50)]),
+    email: new FormControl(null, [Validators.required, Validators.email, Validators.maxLength(255)]),
+    phone: new FormControl(null, [Validators.required, Validators.pattern("[0-9]{10}"), Validators.maxLength(10)])
   }, { updateOn: 'submit' });
 
   getMessage(key: string, details?: any) {

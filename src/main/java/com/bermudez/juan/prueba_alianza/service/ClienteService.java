@@ -54,6 +54,7 @@ public class ClienteService {
         clienteDTO.setBusinessId(cliente.getBusinessId());
         clienteDTO.setEmail(cliente.getEmail());
         clienteDTO.setPhone(cliente.getPhone());
+        clienteDTO.setDataAdded(cliente.getDateCreated());
         return clienteDTO;
     }
 

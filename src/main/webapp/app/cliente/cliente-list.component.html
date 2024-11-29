@@ -12,9 +12,10 @@
         <thead>
             <tr>
                 <th scope="col" class="text-left p-2" i18n="@@cliente.sharedKey.label">Shared Key</th>
-                <th scope="col" class="text-left p-2" i18n="@@cliente.businessId.label">Business Id</th>
-                <th scope="col" class="text-left p-2" i18n="@@cliente.email.label">Email</th>
+                <th scope="col" class="text-left p-2" i18n="@@cliente.businessId.label">Business ID</th>
+                <th scope="col" class="text-left p-2" i18n="@@cliente.email.label">E-mail</th>
                 <th scope="col" class="text-left p-2" i18n="@@cliente.phone.label">Phone</th>
+                <th scope="col" class="text-left p-2" i18n="@@cliente.dataAdded.label">Data Added</th>
                 <th><!-- --></th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
                 <td class="p-2">{{ cliente.businessId }}</td>
                 <td class="p-2">{{ cliente.email }}</td>
                 <td class="p-2">{{ cliente.phone }}</td>
+                <td class="p-2">{{ cliente.dataAdded | date: 'dd/MM/yyy' }}</td>
                 <td class="p-2">
                     <div class="float-right whitespace-nowrap">
                         <a [routerLink]="['/clientes/edit', cliente.sharedKey]" class="inline-block text-white bg-gray-500 hover:bg-gray-600 focus:ring-gray-200 focus:ring-3 rounded px-2.5 py-1.5 text-sm" i18n="@@cliente.list.edit">Edit</a>

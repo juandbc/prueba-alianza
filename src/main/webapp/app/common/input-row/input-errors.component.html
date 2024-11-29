@@ -3,7 +3,11 @@
     @for (error of control?.errors | keyvalue; track error.key) {
     <div class="text-red-600 text-sm">
         @if (isString(error.value)) {
-            {{ error.value }}
+            {{ error.key }}
+        } @else if (error.key == "email") {
+            {{ 'Invalid email format' }}
+        } @else if (error.key == "pattern") {
+            {{ 'Invalid format' }}
         } @else {
             {{ getMessage(error.key, error.value) }}
         }

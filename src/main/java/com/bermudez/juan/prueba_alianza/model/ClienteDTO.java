@@ -1,31 +1,35 @@
 package com.bermudez.juan.prueba_alianza.model;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.OffsetDateTime;
 
 
 @Getter
 @Setter
 public class ClienteDTO {
 
-    @Size(max = 255)
+    @Size(max = 20)
     @ClienteSharedKeyValid
     private String sharedKey;
 
-    @NotNull
-    @Size(max = 255)
+    @NotBlank
+    @Size(max = 50)
     private String businessId;
 
-    @NotNull
+    @Email
     @Size(max = 255)
     @ClienteEmailUnique
     private String email;
 
-    @NotNull
-    @Size(max = 255)
+    @NotBlank
+    @Size(max = 10)
     @ClientePhoneUnique
     private String phone;
 
+    private OffsetDateTime dataAdded;
 }

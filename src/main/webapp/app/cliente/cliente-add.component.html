@@ -6,8 +6,8 @@
 </div>
 <form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
     <app-input-row [group]="addForm" field="sharedKey" i18n-label="@@cliente.sharedKey.label" label="Shared Key" />
-    <app-input-row [group]="addForm" field="businessId" i18n-label="@@cliente.businessId.label" label="Business Id" />
-    <app-input-row [group]="addForm" field="email" i18n-label="@@cliente.email.label" label="Email" />
-    <app-input-row [group]="addForm" field="phone" i18n-label="@@cliente.phone.label" label="Phone" />
+    <app-input-row [group]="addForm" field="businessId" i18n-label="@@cliente.businessId.label" label="Business ID" />
+    <app-input-row [group]="addForm" rowType="email" field="email" i18n-label="@@cliente.email.label" label="E-mail" />
+    <app-input-row [group]="addForm" rowType="tel" field="phone" i18n-label="@@cliente.phone.label" label="Phone" />
     <input type="submit" i18n-value="@@cliente.add.headline" value="Add Cliente" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-300  focus:ring-4 rounded px-5 py-2 mt-6" />
 </form>

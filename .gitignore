@@ -8,7 +8,7 @@ application-local.yml
 *.log
 node_modules/
 .angular/cache
-.package-lock.json
+package-lock.json
 
 ## IntelliJ IDEA
 .idea

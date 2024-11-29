@@ -8,5 +8,6 @@ export class ClienteDTO {
   businessId?: string|null;
   email?: string|null;
   phone?: string|null;
+  dataAdded?: string|null;
 
 }
