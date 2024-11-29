@@ -6,7 +6,15 @@ module.exports = {
     'bg-gray-100'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'blue-600': '#2670C9FF'
+      },
+      fontWeight: {
+        'normal': '700',
+        'medium': '700'
+      }
+    },
     container: {
       center: true,
     }

@@ -9,8 +9,8 @@ import { ErrorComponent } from './error/error.component';
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    title: $localize`:@@home.index.headline:Welcome to your new app!`
+    component: ClienteListComponent,
+    title: $localize`:@@home.index.headline:Prueba técnica Alianza`
   },
   {
     path: 'clientes',
