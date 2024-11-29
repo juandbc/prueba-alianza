@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'blue-600': '#2670C9FF'
+        'blue-600': '#0088cc',
+        'yellow-600': '#d2d654'
       },
       fontWeight: {
         'normal': '700',

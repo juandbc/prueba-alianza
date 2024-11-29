@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { ClienteListComponent } from './cliente/cliente-list.component';
 import { ClienteAddComponent } from './cliente/cliente-add.component';
 import { ClienteEditComponent } from './cliente/cliente-edit.component';
